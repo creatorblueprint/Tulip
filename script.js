@@ -3,6 +3,16 @@ if (!localStorage.getItem("token")) {
   window.location.href = "login.html";
 }
 
+// ===== LOAD SAVED CHAT ON PAGE LOAD =====
+async function loadSavedChat() {
+  try {
+    const response = await fetch("https://petal2-backend.onrender.com/chat", {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token")
+      }
+    });
+
+
 const chatBox = document.getElementById("chatBox");
 const inputField = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
