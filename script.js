@@ -1,3 +1,8 @@
+// If no token, redirect to login
+if (!localStorage.getItem("token")) {
+  window.location.href = "login.html";
+}
+
 const chatBox = document.getElementById("chatBox");
 const inputField = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
