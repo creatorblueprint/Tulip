@@ -11,6 +11,24 @@ async function loadSavedChat() {
         Authorization: "Bearer " + localStorage.getItem("token")
       }
     });
+    
+    const data = await response.json();
+    
+    if (data.messages) {
+      data.messages.forEach(msg => {
+        addMessage(
+          msg.content,
+          msg.role === "assistant" ? "bot" : "user"
+        );
+      });
+    }
+    
+  } catch (err) {
+    console.log("Failed to load chat");
+  }
+}
+
+loadSavedChat();
 
 
 const chatBox = document.getElementById("chatBox");
