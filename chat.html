@@ -5,22 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Petal 💗</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
 
+<div id="imageModal" class="image-modal">
+  <img id="modalImage" src="Petal1.jpeg" alt="Petal Full View" />
+</div>
+
+   <div id="overlay" class="overlay"></div>
+   
   <div class="app">
 
     <div class="chat-card">
 
       <!-- HEADER -->
       <div class="chat-header">
+        
+        <div class="left-section">
+        <button id="hamburgerBtn" class="hamburger">≡</button>
+        </div>
+
         <div class="profile">
           <div class="avatar">
-  <img src="Petal1.jpeg" alt="Petal" />
-</div>
+        <img src="Petal1.jpeg" alt="Petal" />
+         </div>
           <div class="info">
             <h3>Petal</h3>
-            <span class="status">Online 💗</span>
+            <span class="status">Dreaming 💗</span>
           </div>
         </div>
       </div>
@@ -37,7 +49,22 @@
     </div>
 
   </div>
+  
+  <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h2>Petal 💗</h2>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-item">👤 Profile (Coming Soon)</div>
+    <div id="chatItem" class="sidebar-item">💬 Your Chat</div>
+    <div id="logoutBtn" class="sidebar-item logout">🚪 Logout</div>
+  </div>
+</div>
 
   <script src="script.js"></script>
+  <script src="sidebar.js"></script>
+
 </body>
 </html>
