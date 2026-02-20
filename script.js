@@ -34,6 +34,18 @@ loadSavedChat();
 const chatBox = document.getElementById("chatBox");
 const inputField = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
+const avatar = document.querySelector(".avatar img");
+const imageModal = document.getElementById("imageModal");
+
+
+avatar.addEventListener("click", () => {
+  imageModal.classList.add("active");
+});
+
+imageModal.addEventListener("click", () => {
+  imageModal.classList.remove("active");
+});
+
 
 function addMessage(text, sender) {
   const msgDiv = document.createElement("div");
