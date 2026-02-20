@@ -108,6 +108,9 @@ async function sendMessage() {
 if (response.status === 429) {
   addMessage("I'm a little tired today 💗 I've talked a lot already. Let me rest and we'll chat again soon 🌸", "bot");
 }
+  else if (response.status === 403) {
+  addMessage("You've reached your 5 free chats today 💗 Upgrade to keep talking or come back tomorrow 🌸", "bot");
+}
 else if (response.ok) {
   addMessage(data.reply, "bot");
 }
