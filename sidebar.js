@@ -5,6 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("overlay");
   const logoutBtn = document.getElementById("logoutBtn");
   const chatItem = document.getElementById("chatItem");
+  const memoryToggle = document.getElementById("memoryToggle");
+  const memoryList = document.getElementById("memoryList");
+
+if (memoryToggle && memoryList) {
+  memoryToggle.addEventListener("click", () => {
+    const isOpen = memoryList.style.display === "block";
+
+    memoryList.style.display = isOpen ? "none" : "block";
+    memoryToggle.innerHTML = isOpen
+      ? "Saved Memories 💗 ▼"
+      : "Saved Memories 💗 ▲";
+  });
+}
   
   if (!sidebar || !hamburger || !overlay) {
     console.log("Sidebar elements missing");
