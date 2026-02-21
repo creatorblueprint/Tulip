@@ -126,17 +126,17 @@ else {
 
 
 async function loadMemories() {
-  const res = await fetch("/get-memories", {
+  const res = await fetch("https://petal2-backend.onrender.com/get-memories", {
     headers: {
-      Authorization: "Bearer " + localStorage.getItem("token")
+      "Authorization": "Bearer " + localStorage.getItem("token")
     }
   });
-  
+
   const data = await res.json();
-  
+
   const memoryList = document.getElementById("memoryList");
   memoryList.innerHTML = "";
-  
+
   data.memories.forEach((mem, index) => {
     const li = document.createElement("li");
     li.innerHTML = `
@@ -145,6 +145,19 @@ async function loadMemories() {
     `;
     memoryList.appendChild(li);
   });
+}
+
+          async function deleteMemory(index) {
+  await fetch("https://petal2-backend.onrender.com/delete-memory", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + localStorage.getItem("token")
+    },
+    body: JSON.stringify({ index })
+  });
+
+  loadMemories();
 }
 
 
