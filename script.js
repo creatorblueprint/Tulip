@@ -124,6 +124,30 @@ else {
 }
 }
 
+
+async function loadMemories() {
+  const res = await fetch("/get-memories", {
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("token")
+    }
+  });
+  
+  const data = await res.json();
+  
+  const memoryList = document.getElementById("memoryList");
+  memoryList.innerHTML = "";
+  
+  data.memories.forEach((mem, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${mem.content}
+      <button onclick="deleteMemory(${index})">❌</button>
+    `;
+    memoryList.appendChild(li);
+  });
+}
+
+
 sendBtn.addEventListener("click", sendMessage);
 inputField.addEventListener("keypress", function(e) {
   if (e.key === "Enter") sendMessage();
