@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburger.addEventListener("click", () => {
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
+    loadMemories(); //
   });
   
   // Close on overlay click
