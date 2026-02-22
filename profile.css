@@ -25,7 +25,7 @@ body {
 .profile-card {
   width: 90%;
   max-width: 420px;
-  height: 90vh;
+  height: 80vh;
   background: #FFFFFF;
   backdrop-filter: blur(12px);
   border-radius: 30px;
