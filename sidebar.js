@@ -14,8 +14,8 @@ if (memoryToggle && memoryList) {
 
     memoryList.style.display = isOpen ? "none" : "block";
     memoryToggle.innerHTML = isOpen
-      ? "Saved Memories 💗 ▼"
-      : "Saved Memories 💗 ▲";
+      ? "💗 Saved Memories ▼"
+      : "💗 Saved Memories ▲";
   });
 }
   
