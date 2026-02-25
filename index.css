@@ -1,0 +1,370 @@
+/* ====== BODY ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    180deg,
+    #ffd6e8 0%,
+    #fcb7d6 40%,
+    #f8a8c9 100%
+  );
+  min-height: 100%;
+}
+
+/* ====== NAVBAR ====== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.login-btn {
+  border: 2px solid #ff2f75;
+  color: #ff2f75;
+}
+
+.register-btn {
+  background: #ff2f75;
+  color: white;
+}
+
+/* ====== HERO ====== */
+
+.hero {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.hero h1 {
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ff4d8d, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #ff2f75;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 47, 117, 0.35);
+  margin-bottom: 25px;
+}
+
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* ====== HERO IMAGE ====== */
+
+.hero-image {
+  min-height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:  2px 0px;
+}
+
+.hero-image img {
+  width: 85%;
+  max-width: 360px;
+  max-height: 65dvh;     /* limits height relative to screen */
+  height: auto;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* ====== FEATURES ====== */
+
+.features {
+  padding: 35px 18px 40px;
+  display: flex;
+  flex-direction: column;
+  gap:  18px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px auto; 
+  width: 88%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Extra description inside feature card */
+.feature-extra {
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+
+/* ====== FOOTER ====== */
+
+footer {
+  text-align: center;
+  padding:  6px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+.upgrade-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ffd1e6, #ffb3d1);
+  margin-top: 60px;
+  border-radius: 30px 30px 0 0;
+}
+
+.upgrade-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.upgrade-section p {
+  font-size:   14px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.upgrade-btn {
+  background: linear-gradient(45deg, #ff2f74, #ff5a9a);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upgrade-btn:hover {
+  transform: scale(1.05);
+}
+
+.site-footer {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  padding: 20px 0;
+}
+
+.site-footer a {
+  color: #444;
+  font-size:  500;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  color: #e91e63;
+  transition: 0.2s ease;
+}
+
+/* ===== Romantic Upgrade Modal ===== */
+
+.upgrade-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+.upgrade-card {
+  width: 90%;
+  max-width: 420px;
+  background: linear-gradient(145deg, #ffe4ef, #ffd6ea);
+  padding: 28px 24px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  animation: modalFade 0.25s ease;
+}
+
+.upgrade-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.upgrade-subtitle {
+  font-size: 13px;
+  color: #555;
+  margin-bottom:  20px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.plan-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+  font-size: 13px;
+  color: #444;
+  text-align: left;
+}
+
+.feature-list li {
+  margin-bottom: 7px;
+}
+
+
+.plan-card h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ff4d94;
+  margin-bottom: 10px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.plan-card li {
+  margin-bottom: 6px;
+}
+
+.plan-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: linear-gradient(135deg, #FF3182, #ff3f8e);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 18px rgba(255, 79, 142, 0.35);
+}
+
+.plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 79, 142, 0.45);
+}
+
+.premium-btn {
+  background: linear-gradient(135deg, #FF2E80, #ff3f8e);
+}
+
+.divider {
+  font-size: 12px;
+  color: #777;
+  margin: 8px 0 12px 0;
+}
+
+.close-modal {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #575050;
+  cursor: pointer;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

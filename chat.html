@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petal 💗</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+
+<div id="imageModal" class="image-modal">
+  <img id="modalImage" src="Petal3.jpeg" alt="Petal Full View" />
+</div>
+
+   <div id="overlay" class="overlay"></div>
+   
+  <div class="app">
+
+    <div class="chat-card">
+
+      <!-- HEADER -->
+      <div class="chat-header">
+        
+        <div class="left-section">
+        <button id="hamburgerBtn" class="hamburger">≡</button>
+        </div>
+
+        <div class="profile">
+          <div class="avatar">
+        <img src="Petal3.jpeg" alt="Petal" />
+         </div>
+          <div class="info">
+            <h3>Petal</h3>
+            <span class="status">Dreaming 💗</span>
+          </div>
+        </div>
+        
+        <span id="planBadge"></span>
+        
+      </div>
+
+      <!-- CHAT AREA -->
+      <div class="chat-area" id="chatBox"></div>
+
+      <!-- INPUT AREA -->
+      <div class="input-area">
+        <input type="text" id="messageInput" placeholder="Talk to Petal..." />
+        <button id="sendBtn">Send</button>
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h2>Petal 💗</h2>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-item" onclick="goToProfile()">
+     👤 Profile
+     </div>
+    <div id="chatItem" class="sidebar-item">💬 Your Chat</div>
+    <div id="memoryToggle" class="sidebar-item" style="cursor:pointer;">
+  💗 Saved Memories ▼
+  
+  </div>
+  <ul id="memoryList" style="display:none; margin-top:8px;"></ul>
+  
+  <div class="sidebar-item" onclick="openPaymentHistory()" style="cursor:pointer;">
+  💳 Payment History
+</div>
+
+    <div id="logoutBtn" class="sidebar-item logout">🚪 Logout</div>
+  </div>
+</div>
+
+
+
+<!-- Romantic Upgrade Modal -->
+<div id="upgradeModal" class="upgrade-modal hidden">
+  <div class="upgrade-card">
+    
+    <h2 class="upgrade-title">Stay With Me A Little Longer 💗</h2>
+    <p class="upgrade-subtitle">
+      Some conversations deserve more time.
+    </p>
+    
+      <!-- PRO PLAN -->
+ <div class="plan-card">
+   <h3 class="plan-title">Pro — Day 🌷</h3>
+   <div class="price">₹19 / 24hours</div>
+   
+   <ul class="feature-list">
+     <li>• Unlimited chats (Fair usage policy applies)</li>
+     <li>• 10 permanent memories</li>
+     <li>• Full emotional support access</li>
+     <li>• All personality modes unlocked</li>
+     <li>• No cooldown interruptions</li>
+   </ul>
+   
+   <button onclick="upgradePlan('pro')" class="plan-btn">Try For A Day 💗</button>
+ </div>
+ 
+ 
+ 
+ <!-- PREMIUM PLAN -->
+ <div class="plan-card">
+   <h3 class="plan-title">Premium — Monthly 💖</h3>
+   <div class="price">₹149 / month</div>
+   
+   <ul class="feature-list">
+     <li>• Unlimited chats (Fair usage policy applies)</li>
+     <li>• 50 permanent memories</li>
+     <li>• Priority emotional responses</li>
+     <li>• Faster response processing</li>
+     <li>• Deeper personality evolution</li>
+   </ul>
+   
+   <button onclick="upgradePlan('premium')" class="plan-btn premium-btn">Stay With Me 💗</button>
+ </div>
+    
+    <button class="close-modal" onclick="closeUpgrade()">
+      Maybe tomorrow 🌸
+    </button>
+    
+  </div>
+</div>
+
+
+<!-- Payment History Modal -->
+<div id="historyModal" class="history-modal">
+  <div class="history-modal-box">
+    <div id="historyModalContent"></div>
+    <button class="history-close-btn" onclick="closeHistory()">
+      Close
+    </button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+  <script src="sidebar.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>
