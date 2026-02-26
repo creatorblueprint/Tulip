@@ -214,7 +214,7 @@ async function upgradePlan(planType) {
   
   // Step 2: Open Razorpay
   const options = {
-    key: "rzp_test_SKFmXm2vDAu7Qk", // Put your TEST key here
+    key: "rzp_live_SKhRyte22gTj4e", // Put your TEST key here
     amount: order.amount,
     currency: order.currency,
     name: "Petal 💗",
